@@ -26,6 +26,43 @@
 \setbeamercolor{enumerate subitem}{fg=darkgray}
 \setbeamercolor{enumerate subsubitem}{fg=darkgray}
 
+\RequirePackage[slantfont, CJKnumber, boldfont]{xeCJK}
+\usepackage{txfonts}
+\RequirePackage{fontspec,xunicode,xltxtra}
+% http://www.feedbackward.com/content/nbs_latex.pdf
+\DeclareTextCommand{\nobreakspace}{T1}{\leavevmode\nobreak\ }
+\XeTeXlinebreaklocale "zh"
+
+\setmainfont[Mapping=tex-text]{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+
+\setCJKmainfont{SimHei}
+\setCJKsansfont{SimHei}
+\setCJKmonofont{SimHei}
+\punctstyle{kaiming}
+
+\setCJKfamilyfont{SongTi}{SimSun} % 更好印刷效果可换成 Adobe Heiti Std
+\DeclareRobustCommand{\songti}{\CJKfamily{SongTi}}     % 宋体
+\setCJKfamilyfont{FangSong}{FangSong}
+\DeclareRobustCommand{\fangsong}{\CJKfamily{FangSong}} % 仿宋
+\setCJKfamilyfont{KaiShu}{KaiTi}
+\DeclareRobustCommand{\kaiti}{\CJKfamily{KaiShu}}      % 楷体
+\setCJKfamilyfont{HeiTi}{SimHei}
+\DeclareRobustCommand{\heiti}{\CJKfamily{HeiTi}}       % 黑体
+\setCJKfamilyfont{LiShu}{LiSu}
+\DeclareRobustCommand{\lishu}{\CJKfamily{LiShu}}       % 隶书
+\setCJKfamilyfont{YouYuan}{YouYuan}
+\DeclareRobustCommand{\youti}{\CJKfamily{YouYuan}}     % 幼圆
+\setCJKfamilyfont{STFangsong}{STFangsong}
+\DeclareRobustCommand{\stfangsong}{\CJKfamily{STFangsong}} % ST仿宋
+\setCJKfamilyfont{STXingkai}{STXingkai}
+\DeclareRobustCommand{\stxingkai}{\CJKfamily{STXingkai}}   % ST行楷
+\setCJKfamilyfont{tnroman}{Times New Roman}
+\DeclareRobustCommand{\tnroman}{\CJKfamily{tnroman}}       % Times New Roman
+
+% conflict with xeCJK, naive fix
+\let\sidefault\relax
 % default font choices
 \usepackage{venturis}
 
